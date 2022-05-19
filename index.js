@@ -12,5 +12,17 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let eh = tutorials.map(x => iterate(x).trim())
+   return eh
 }
+
+function iterate(string) {
+  var words = string.split(" "); //divides each sentence from tutorials into an array with each word as the elements
+  var answer = "";
+  for (var i = 0; i < words.length; i++) {
+      answer= answer + words[i][0].toUpperCase() + words[i].slice(1) + " "
+  }
+  return answer
+}
+
+
